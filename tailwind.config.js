@@ -1,4 +1,3 @@
-// @ts-check
 const { fontFamily } = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
@@ -15,18 +14,13 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
-      lineHeight: {
-        11: '2.75rem',
-        12: '3rem',
-        13: '3.25rem',
-        14: '3.5rem',
-      },
       fontFamily: {
         sans: ['var(--font-space-grotesk)', ...fontFamily.sans],
       },
       colors: {
-        primary: colors.pink,
+        primary: colors.sky, // 하늘색으로 변경
         gray: colors.gray,
+        white: colors.white, // 추가: 화이트 색상
       },
       typography: ({ theme }) => ({
         DEFAULT: {
