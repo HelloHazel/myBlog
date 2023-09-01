@@ -5,7 +5,7 @@ import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './SearchButton'
 import Image from 'next/image'
-import Logo from '@/data/logo-hazelpic.jpg'
+import Logo from '@/data/avatar.png'
 
 const Header = () => {
   return (
