@@ -20,7 +20,7 @@ Reddit 클론 프로젝트를 구현하는 데에 있어서 중요했던 것 중
 
 해당 함수는 액션 유형을 나타내는 문자열과 데이터를 반환하는 비동기 함수 두 가지 인수를 취한다.
 
-```js
+```
 const getCurrentPost = createAsyncThunk('currentPost/getCurrentPost', async (postid) => {
   const resp = await axios.get('/api/currpost', {
     params: { postid: postid },
@@ -51,7 +51,7 @@ getCurrentPost 함수는 `createAsyncThunk` 를 사용하여 생성되며, posti
 
 개별 게시물 데이터를 가져오는 것 외에도, 사이드메뉴에서 토픽 및 서브토픽 데이터를 검색하는 기능도 구현해야 했는데, 게시물과 마찬가지로 extraReducers 속성을 사용하여 비동기 호출의 다른 상태를 처리했다. 아래 코드가 해당 구현 코드다.
 
-```js
+```
 const asyncTopic = createAsyncThunk('communitySlice/asyncTopic', async () => {
   const resp = await axios.get('/api/topic')
   return resp.data
