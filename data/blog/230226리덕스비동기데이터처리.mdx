@@ -19,7 +19,7 @@ Reddit 클론 프로젝트를 구현하는 데에 있어서 중요했던 것 중
 예시 코드 1
 해당 함수는 액션 유형을 나타내는 문자열과 데이터를 반환하는 비동기 함수 두 가지 인수를 취한다.
 
-<addr>
+```
 const getCurrentPost = createAsyncThunk(
 "currentPost/getCurrentPost",
 async (postid) => {
@@ -45,8 +45,7 @@ builder.addCase(getCurrentPost.rejected, (state, action) => {
 });
 },
 });
-
-</addr>
+```
 
 getCurrentPost 함수는 createAsyncThunk 를 사용하여 생성되며, postid를 매개변수로 사용하는 dispatch 메서드를 가지고 있다. 함수는 axios 라이브러리를 사용하여 postid 매개변수에 해당하는 서버 측 라우트에 대한 비동기 GET 요청을 수행합니다. 응답이 수신되면 함수는 데이터를 반환한다.
 
@@ -55,7 +54,7 @@ getCurrentPost 함수는 createAsyncThunk 를 사용하여 생성되며, postid�
 예시 코드 2
 개별 게시물 데이터를 가져오는 것 외에도, 사이드메뉴에서 토픽 및 서브토픽 데이터를 검색하는 기능도 구현해야 했는데, 게시물과 마찬가지로 extraReducers 속성을 사용하여 비동기 호출의 다른 상태를 처리했다. 아래 코드가 해당 구현 코드다.
 
-<addr>
+```
 const asyncTopic = createAsyncThunk("communitySlice/asyncTopic", async () => {
 const resp = await axios.get("/api/topic");
 return resp.data;
@@ -104,7 +103,7 @@ builder.addCase(asyncSub.rejected, (state, action) => {
 },
 });
 
-</addr>
+```
 
 Redux Toolkit의 createAsyncThunk 함수를 사용하면 비동기 데이터 처리 과정을 단순화할 수 있다. 여러 상태에 대한 복수의 리듀서를 작성하지 않고도 비동기 작업을 생성할 수 있기 때문이다.
 
