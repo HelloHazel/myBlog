@@ -1,7 +1,7 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Next.js Starter Blog',
-  author: 'Tails Azimuth',
+  title: 'Hazel-log',
+  author: 'Hazel Yu',
   headerTitle: 'Hazel-Blog',
   description: '헤이즐의 무수한 삽질 기록',
   language: 'ko-KR',
