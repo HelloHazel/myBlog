@@ -10,7 +10,7 @@ summary: 'Flutter 찍먹하기 시리즈 -1'
 
 Dart는 모든 플랫폼에서 빠른 앱을 개발하기 위해 클라이언트에 최적화된 언어다.
 
-Dart의 특징이자 장점은 아래와
+Dart의 특징이자 장점은 아래와 같다
 
 - UI에 최적화되어있다
   - null-safety ( https://dart-ko.dev/null-safety )
@@ -22,16 +22,16 @@ Dart의 특징이자 장점은 아래와
 
 ## Dart 기초 문법
 
-- main 함수
+**main 함수**
 
 ```dart
 void main(){
 }
 ```
 
-( )로 매개변수 지정해 받아오기 가능
+- ( )로 매개변수 지정해 받아오기 가능
 
-- print( ) 함수
+**print( ) 함수**
 
 ```dart
 void main(){
@@ -41,38 +41,38 @@ void main(){
 
 -문자열 콘솔에 출력
 
-- 다양한 변수 타입
+**다양한 변수 타입**
 
-  - var -[기본형식] var 변수명 = 값; -자동 타입추론 기능 제공 -값 변경 가능 , 중복 선언 불가능
+- var -[기본형식] var 변수명 = 값;
 
-  - dynamic
+  -자동 타입추론 기능 제공 -값 변경 가능 , 중복 선언 불가능
 
-    - 변수의 타입을 자유롭게 선언 가능
+- dynamic
 
-  - 상수 final / const - final (런타임 상수) - const (빌드타임 상수)
+  - 변수의 타입을 자유롭게 선언 가능
 
-        ```dart
+- 상수 final / const
 
-    void main(){
-    final DateTime now = DateTime.now();
-    const DateTime now = DateTime.now();
-    }
+  - final (런타임 상수) - const (빌드타임 상수)
 
-    ```
+  ```dart
+  void main(){
+  final DateTime now = DateTime.now();
+  const DateTime now = DateTime.now();
+  }
+  ```
 
-    ```
+- 해당 코드 실행시 const에서 에러가 발생한다 (const는 빌드될 때 값이 확정되기 떄문)
 
-  - 해당 코드 실행시 const에서 에러가 발생한다 (const는 빌드될 때 값이 확정되기 떄문)
+**변수 타입**
 
--변수 타입
+-string : 문자열
 
--**string** : 문자열
+-int : 정수
 
--**int** : 정수
+-double : 실수
 
--**double** : 실수
-
--**bool** : 불리언
+-bool : 불리언
 
 # Syntax guide
 
