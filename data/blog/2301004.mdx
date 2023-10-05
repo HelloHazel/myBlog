@@ -22,7 +22,46 @@ Dart의 특징이자 장점은 아래와
 
 # Dart 기초 문법
 
-Markdown is a way to style text on the web. You control the display of the document; formatting words as bold or italic, adding images, and creating lists are just a few of the things we can do with Markdown. Mostly, Markdown is just regular text with a few non-alphabetic characters thrown in, like `#` or `*`.
+- main 함수
+
+```dart
+void main(){
+
+}
+```
+
+- ()로 매개변수 지정해 받아오기 가능
+
+- print() 함수
+
+```dart
+void main(){
+
+}
+```
+
+-문자열 콘솔에 출력
+
+- 다양한 변수 타입
+
+  - var -[기본형식] var 변수명 = 값; -자동 타입추론 기능 제공 -값 변경 가능 , 중복 선언 불가능
+
+  - dynamic
+
+    - 변수의 타입을 자유롭게 선언 가능
+
+  - 상수 final / const - final (런타임 상수) - const (빌드타임 상수)
+
+        ```dart
+
+    void main(){
+    final DateTime now = DateTime.now();
+    const DateTime now = DateTime.now();
+    }
+
+        ```
+
+  - 해당 코드 실행시 const에서 에러가 발생한다 (const는 빌드될 때 값이 확정되기 떄문)
 
 # Syntax guide
 
@@ -31,11 +70,13 @@ Here’s an overview of Markdown syntax that you can use anywhere on GitHub.com 
 ## Headers
 
 ```
+
 # This is a h1 tag
 
 ## This is a h2 tag
 
 #### This is a h4 tag
+
 ```
 
 # This is a h1 tag
@@ -47,11 +88,13 @@ Here’s an overview of Markdown syntax that you can use anywhere on GitHub.com 
 ## Emphasis
 
 ```
+
 _This text will be italic_
 
 **This text will be bold**
 
 _You **can** combine them_
+
 ```
 
 _This text will be italic_
@@ -65,10 +108,12 @@ _You **can** combine them_
 ### Unordered
 
 ```
+
 - Item 1
 - Item 2
   - Item 2a
   - Item 2b
+
 ```
 
 - Item 1
@@ -79,11 +124,13 @@ _You **can** combine them_
 ### Ordered
 
 ```
+
 1. Item 1
 1. Item 2
 1. Item 3
    1. Item 3a
    1. Item 3b
+
 ```
 
 1. Item 1
@@ -95,8 +142,10 @@ _You **can** combine them_
 ## Images
 
 ```
+
 ![GitHub Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
 Format: ![Alt Text](url)
+
 ```
 
 ![GitHub Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
@@ -104,8 +153,10 @@ Format: ![Alt Text](url)
 ## Links
 
 ```
+
 http://github.com - automatic!
 [GitHub](http://github.com)
+
 ```
 
 http://github.com - automatic!
@@ -114,10 +165,12 @@ http://github.com - automatic!
 ## Blockquotes
 
 ```
+
 As Kanye West said:
 
 > We're living the future so
 > the present is our past.
+
 ```
 
 As Kanye West said:
@@ -128,8 +181,10 @@ As Kanye West said:
 ## Inline code
 
 ```
+
 I think you should use an
 `<addr>` element here instead.
+
 ```
 
 I think you should use an
@@ -140,13 +195,15 @@ I think you should use an
 Here’s an example of how you can use syntax highlighting with [GitHub Flavored Markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/):
 
 ````
+
 ```js:fancyAlert.js
 function fancyAlert(arg) {
   if (arg) {
     $.facebox({ div: '#foo' })
   }
 }
-```
+````
+
 ````
 
 And here's how it looks - nicely colored with styled code titles!
@@ -202,3 +259,4 @@ You can create tables by assembling a list of words and dividing them with hyphe
 ## Strikethrough
 
 Any word wrapped with two tildes (like `~~this~~`) will appear ~~crossed out~~.
+````
