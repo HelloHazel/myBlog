@@ -45,7 +45,7 @@ pring('Hello Hazel)
 
 - var -[기본형식] var 변수명 = 값;
 
-  -자동 타입추론 기능 제공 -값 변경 가능 , 중복 선언 불가능
+  - 자동 타입추론 기능 제공 -값 변경 가능 , 중복 선언 불가능
 
 - dynamic
 
@@ -80,9 +80,122 @@ pring('Hello Hazel)
 
 **List 타입**
 
-[기본 형식]
+```dart
+void main() {
+List<String> flutterStudy = ['베짱이','Hun','Jake','이지훈'];
+print(flutterStudy);
+flutterStudy.add('헤이즐');
+print(flutterStudy);
 
+}
 ```
+
+-Where()
+
+```dart
+final HunflutterStudy = flutterStudy.where(
+(name) => name == 'Hun' || name == '이지훈',
+);
+
+
+print(HunflutterStudy);
+print(HunflutterStudy.toList());
+```
+
+-map()
+
+```dart
+void main() {
+List<String> flutterStudy = ['베짱이','Hun','Jake','이지훈', '헤이들'];
+final allMembers = flutterStudy.map(
+(name) => '스터디멤버 $name',
+);
+print(allMembers);
+}
+```
+
+-reduce()
+
+````dart
+void main() {
+List<String> flutterStudy = ['베짱이','Hun','Jake','이지훈', '헤이들'];
+final allMembers = flutterStudy.reduce((value, element) => value + ',' + element);
+print(allMembers);
+}
+```
+
+-fold()
+
+```dart
+void main() {
+List<String> flutterStudy = ['베짱이','Hun','Jake','이지훈', '헤이즐'];
+final allMembers = flutterStudy.fold<int>(
+0, (value, element) => value + element.length);
+print(allMembers);
+}
+```
+
+Map 기본
+
+```dart
+void main() {
+Map<String, String> animals = {
+'dog' : '강아지',
+'cat' : '고양이',
+'horse' : '말',
+'rat' : '쥐',
+ };
+
+print(animals['dog']);
+print(animals['cat']);
+}
+```
+
+Map 키, 값 반환
+
+```dart
+void main() {
+Map<String, String> animals = {
+'dog' : '강아지',
+'cat' : '고양이',
+'horse' : '말',
+'rat' : '쥐',
+ };
+
+print(animals.keys);
+print(animals.values);
+}
+```
+
+Set타입
+
+```dart
+void main() {
+Set<String> flutterStudy = {'베짱이','Hun','Jake','이지훈', '헤이즐'};
+print(flutterStudy);
+print(flutterStudy.contains('헤이즐'));
+print(flutterStudy.toList());
+
+List<String> flutterMems = ['베짱이', 'Hun', 'Jake'];
+print(Set.from(flutterMems));
+}
+```
+
+Enum
+
+```dart
+enum Status{
+approved,
+pending,
+rejected,
+}
+void main(){
+Status status = Status.approved;
+print(status);
+}
+```
+
+````
 
 # This is a h1 tag
 
@@ -207,7 +320,7 @@ I think you should use an
 
 Here’s an example of how you can use syntax highlighting with [GitHub Flavored Markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/):
 
-````
+```
 
 ```js:fancyAlert.js
 function fancyAlert(arg) {
@@ -215,7 +328,7 @@ function fancyAlert(arg) {
     $.facebox({ div: '#foo' })
   }
 }
-````
+```
 
 ````
 
