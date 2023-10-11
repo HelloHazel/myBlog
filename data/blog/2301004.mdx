@@ -66,13 +66,10 @@ pring('Hello Hazel)
 
 **변수 타입**
 
--string : 문자열
-
--int : 정수
-
--double : 실수
-
--bool : 불리언
+| 변수타입        |               |
+| --------------- | ------------- |
+| string : 문자열 | int : 정수    |
+| double : 실수   | bool : 불리언 |
 
 ## 컬렉션
 
@@ -90,9 +87,10 @@ print(flutterStudy);
 }
 ```
 
--Where()
+- Where()
 
 ```dart
+void main() {
 final HunflutterStudy = flutterStudy.where(
 (name) => name == 'Hun' || name == '이지훈',
 );
@@ -100,6 +98,7 @@ final HunflutterStudy = flutterStudy.where(
 
 print(HunflutterStudy);
 print(HunflutterStudy.toList());
+}
 ```
 
 -map()
@@ -114,17 +113,17 @@ print(allMembers);
 }
 ```
 
--reduce()
+- reduce()
 
 ```dart
 void main() {
-List<String> flutterStudy = ['베짱이','Hun','Jake','이지훈', '헤이들'];
+List<String> flutterStudy = ['베짱이','Hun','Jake','이지훈', '헤이즐'];
 final allMembers = flutterStudy.reduce((value, element) => value + ',' + element);
 print(allMembers);
 }
 ```
 
--fold()
+- fold()
 
 ```dart
 void main() {
@@ -135,7 +134,7 @@ print(allMembers);
 }
 ```
 
-Map 기본
+### Map 기본
 
 ```dart
 void main() {
