@@ -92,7 +92,7 @@ print(flutterStudy);
 }
 ```
 
-- When ? List에 값을 추가할 때 사용
+- \*\*When ? List에 값을 추가할 때 사용
 - How ? 추가하고 싶은 값을 매개변수에 입력한다.
 
 **Where( )**
@@ -109,12 +109,13 @@ print(HunflutterStudy.toList());
 }
 ```
 
-- List에 있는 값을 순회하며 조건을 충족시키는 값만 필터링하는데 사용
+- **When ?**List에 있는 값을 순회하며 조건을 충족시키는 값만 필터링하는데 사용
+- ** How ?** 매개변수에 함수를 입력하면, 입력된 함수는 기존값을 하나씩 매개변수로 받음. True일시에는 값을 유지하고 false일시 값을 버린다.
   **map()**
 
 ```dart
 void main() {
-List<String> flutterStudy = ['베짱이','Hun','Jake','이지훈', '헤이들'];
+List<String> flutterStudy = ['베짱이','Hun','Jake','이지훈', '헤이즐'];
 final allMembers = flutterStudy.map(
 (name) => '스터디멤버 $name',
 );
@@ -122,7 +123,8 @@ print(allMembers);
 }
 ```
 
-**reduce()**
+- List에 있는 값을 순서대로 순회하며 값을 변경
+  **reduce()**
 
 ```dart
 void main() {
@@ -132,7 +134,7 @@ print(allMembers);
 }
 ```
 
-- fold()
+**fold( )**
 
 ```dart
 void main() {
